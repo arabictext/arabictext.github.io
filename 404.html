@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Arabic Text</title>
+    
+    <!-- Meta Redirect Otomatis Instant Tanpa Durasi ke Beranda -->
+    <meta http-equiv="refresh" content="0;url=https://arabictext.github.io/">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --primary-color: #2563eb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --text-color: #f1f5f9;
+            --primary-color: #3b82f6;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-container {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .error-code {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .arabic-msg {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #64748b;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-home:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p class="arabic-msg">عذراً، الصفحة غير موجودة. جاري تحويلك إلى الصفحة الرئيسية...</p>
+        <p>Redirecting you to the home page instantly...</p>
+        <a href="https://arabictext.github.io/" class="btn-home">
+            <i class="fa-solid fa-house"></i> Go Home Now
+        </a>
+    </div>
+
+    <script>
+        // Redirect JavaScript instan cadangan jika meta refresh tidak didukung browser tertentu
+        window.location.replace("https://arabictext.github.io/");
+    </script>
+</body>
+</html>
