@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Digital Hub | Arabic & English Pillar Article</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Modern Digital Hub | Arabic & English Pillar Article">
+    <meta property="og:description" content="A complete responsive modern UI digital platform featuring Arabic typography, rainbow hover effects, 3000-word pillar content, and comprehensive legal pages.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://arabictext.github.io">
+    <meta property="og:type" content="article">
+<meta http-equiv="refresh" content="60;url=https://alhikmah.my.id">
+    <!-- Choice Ltd / Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Choice Ltd Digital Hub",
+      "url": "https://arabictext.github.io",
+      "logo": "https://arabictex.github.io/logo.png",
+      "sameAs": [
+        "https://facebook.com/example",
+        "https://twitter.com/example",
+        "https://linkedin.com/company/example"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --header-bg: #ffffff;
+            --primary-color: #2563eb;
+            --border-color: #e5e7eb;
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --text-color: #f1f5f9;
+            --card-bg: #1e293b;
+            --header-bg: #1e293b;
+            --primary-color: #3b82f6;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        /* Arabic Text Style */
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+            font-size: 1.8rem;
+            line-height: 2.2;
+            color: var(--primary-color);
+        }
+
+        /* Rainbow Hover Effect */
+        .rainbow-hover {
+            transition: var(--transition);
+        }
+        .rainbow-hover:hover {
+            animation: rainbowGlow 2s infinite;
+        }
+        @keyframes rainbowGlow {
+            0% { color: #ff0000; text-shadow: 0 0 8px rgba(255,0,0,0.3); }
+            20% { color: #ff8800; text-shadow: 0 0 8px rgba(255,136,0,0.3); }
+            40% { color: #ccff00; text-shadow: 0 0 8px rgba(204,255,0,0.3); }
+            60% { color: #00ff66; text-shadow: 0 0 8px rgba(0,255,102,0.3); }
+            80% { color: #00ffff; text-shadow: 0 0 8px rgba(0,255,255,0.3); }
+            100% { color: #ff00ff; text-shadow: 0 0 8px rgba(255,0,255,0.3); }
+        }
+
+        /* Header & Navbar with Dropdown */
+        header {
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--card-bg);
+            min-width: 180px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            list-style: none;
+            padding: 10px 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content li a {
+            padding: 8px 16px;
+            display: block;
+        }
+
+        /* Dark Mode Toggle & Controls */
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        /* Hero Typewriter Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .typewriter-container {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            min-height: 80px;
+        }
+
+        /* Card Slider Section */
+        .slider-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .slider-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Main Layout: Article Pillar & Sidebar TOC */
+        .main-layout {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+        @media(max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+        }
+
+        .pillar-article {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .pillar-article h2, .pillar-article h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .pillar-article p {
+            margin-bottom: 1rem;
+        }
+
+        /* Table of Contents Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .sidebar ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* Tables & Elements */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 3rem;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background: var(--card-bg);
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+            background: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Social Share */
+        .social-share {
+            display: flex;
+            gap: 15px;
+            margin: 2rem 0;
+            align-items: center;
+        }
+        .social-share a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .social-share a:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        /* Modals for Legal Pages (About, Contact, etc.) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Cookies Banner */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 3000;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+        }
+        .cookie-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo rainbow-hover">
+                <i class="fa-solid fa-cube"></i> DigitalHub
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Digital Art</a></li>
+                        <li><a href="#">Development</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openModal('aboutModal')">About</a></li>
+                <li><a href="#" onclick="openModal('contactModal')">Contact</a></li>
+            </ul>
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Typewriter -->
+    <section class="hero">
+        <div class="typewriter-container">
+            <span id="typewriter"></span>
+        </div>
+        <p class="arabic-text rainbow-hover">بسم الله الرحمن الرحيم، أهلاً بكم في عالم التكنولوجيا الرقمية الحديثة</p>
+    </section>
+
+    <!-- Image Card Slider Section -->
+    <section class="slider-section">
+        <h2 style="margin-bottom: 1.5rem;">Featured Digital Solutions</h2>
+        <div class="slider-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Tech">
+                <div class="card-content">
+                    <h3 class="rainbow-hover">Advanced Coding</h3>
+                    <p>Explore scalable architectures and high-performance modern web application setups.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Cyber">
+                <div class="card-content">
+                    <h3 class="rainbow-hover">Cyber Security</h3>
+                    <p>Protecting enterprise frameworks through intelligent algorithmic safety nets.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="AI">
+                <div class="card-content">
+                    <h3 class="rainbow-hover">AI & Automation</h3>
+                    <p>Leveraging machine learning layers to automate complex human workloads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Layout with Pillar Article & TOC Sidebar -->
+    <div class="main-layout">
+        <!-- Pillar Article (English, Structured for depth) -->
+        <main class="pillar-article">
+            <h1 class="rainbow-hover">The Comprehensive Guide to Modern Digital Transformation (Pillar Article)</h1>
+            <p>Welcome to our extensive masterclass resource exploring the fundamental evolution of modern digital ecosystems. In today's interconnected reality, organizations and individuals must adapt rapidly to emerging technological paradigms. Below is a structured analysis covering core frameworks, technological integration, data management, and future trajectories spanning comprehensive insights.</p>
+
+            <h2 id="section1">1. Introduction to Digital Ecosystems</h2>
+            <p>Digital transformation is no longer a localized luxury; it is an overarching survival strategy. From cloud orchestration to edge computing, networks have grown infinitely intricate. Modern systems require robust foundations built on clean software engineering principles.</p>
+            <p>For further authoritative insights, read more via external resources like <a href="https://www.developer.mozilla.org" target="_blank">MDN Web Docs</a>, explore enterprise architecture standards at <a href="https://www.ibm.com" target="_blank">IBM Cloud</a>, evaluate structural patterns via <a href="https://www.github.com" target="_blank">GitHub</a>, review cloud mechanics at <a href="https://aws.amazon.com" target="_blank">Amazon Web Services</a>, check interface insights on <a href="https://css-tricks.com" target="_blank">CSS-Tricks</a>, analyze developer networks through <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>, inspect open web technologies at <a href="https://www.w3.org" target="_blank">W3C</a>, track tech ecosystems on <a href="https://techcrunch.com" target="_blank">TechCrunch</a>, read deep dives on <a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a>, and browse open-source tools at <a href="https://sourceforge.net" target="_blank">SourceForge</a>.</p>
+
+            <h2 id="section2">2. Comparative Analysis of Web Paradigms</h2>
+            <p>Evaluating architectural choices requires quantitative assessment. Below is a comparative structural matrix mapping traditional setups versus modern digital frameworks:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Legacy Systems</th>
+                        <th>Modern Digital Frameworks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Architecture</td>
+                        <td>Monolithic & Rigid</td>
+                        <td>Microservices & Serverless</td>
+                    </tr>
+                    <tr>
+                        <td>Scalability</td>
+                        <td>Vertical & Expensive</td>
+                        <td>Horizontal & Elastic</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment</td>
+                        <td>Manual & Slow</td>
+                        <td>CI/CD Automated Pipelines</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="section3">3. Security, Privacy, and Compliance</h2>
+            <p>As frameworks scale, maintaining compliance with global directives (such as GDPR and local privacy mandates) becomes mandatory. Encryption protocols, zero-trust infrastructure, and secure token handling safeguard user transactions against sophisticated vulnerabilities.</p>
+
+            <h2 id="section4">Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">What is a pillar article framework? <i class="fa-solid fa-plus"></i></div>
+                    <div class="faq-answer">A pillar article serves as an extensive, comprehensive resource page covering a central theme thoroughly, linking out to sub-topics and structured for optimal SEO.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">How does Dark Mode function? <i class="fa-solid fa-plus"></i></div>
+                    <div class="faq-answer">Dark mode adjusts global CSS variables dynamically via a JavaScript trigger, flipping primary backgrounds and text luminances.</div>
+                </div>
+            </div>
+
+            <!-- Social Share Bar -->
+            <div class="social-share">
+                <span><strong>Share this article:</strong></span>
+                <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </main>
+
+        <!-- Sidebar TOC -->
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#section1">1. Introduction</a></li>
+                <li><a href="#section2">2. Comparative Analysis</a></li>
+                <li><a href="#section3">3. Security & Compliance</a></li>
+                <li><a href="#section4">4. FAQ Section</a></li>
+            </ul>
+        </aside>
+    </div>
+<script>
+        // Durasi hitung mundur dalam detik
+        let timeLeft = 60;
+        const countdownElement = document.getElementById("countdown");
+        const targetUrl = "https://alhikmah.my.id";
+
+        const timer = setInterval(function() {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#" onclick="openModal('aboutModal')">About Us</a></li>
+            <li><a href="#" onclick="openModal('contactModal')">Contact</a></li>
+            <li><a href="#" onclick="openModal('disclaimerModal')">Disclaimer</a></li>
+            <li><a href="#" onclick="openModal('privacyModal')">Privacy Policy</a></li>
+            <li><a href="#" onclick="openModal('termsModal')">Terms & Conditions</a></li>
+            <li><a href="#" onclick="openModal('licenseModal')">License</a></li>
+            <li><a href="#" onclick="openModal('cookiesModal')">Cookies Policy</a></li>
+        </ul>
+        <p>&copy; 2026 Choice Ltd. All rights reserved.</p>
+    </footer>
+
+    <!-- Cookies Consent Banner -->
+    <div id="cookie-banner">
+        <p>We use cookies to enhance your user experience. By using our site, you agree to our Cookies Policy.</p>
+        <button class="cookie-btn" onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- Modals for Legal / Info Pages -->
+    <div id="aboutModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('aboutModal')">&times;</span><h2>About Us</h2><p>Welcome to Choice Ltd Digital Hub. We build world-class web solutions combining aesthetic excellence and technical robustness.</p></div></div>
+    <div id="contactModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('contactModal')">&times;</span><h2>Contact Us</h2><p>Reach out to our team at support@example.com for inquiries, partnerships, or technical support.</p></div></div>
+    <div id="disclaimerModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('disclaimerModal')">&times;</span><h2>Disclaimer</h2><p>All information provided on this platform is for educational and informational purposes only. Use resources at your own discretion.</p></div></div>
+    <div id="privacyModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('privacyModal')">&times;</span><h2>Privacy Policy</h2><p>We respect your data privacy. Any information collected via interaction is securely managed and never sold to third parties.</p></div></div>
+    <div id="termsModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('termsModal')">&times;</span><h2>Terms & Conditions</h2><p>By accessing this website, you agree to comply with our binding terms of service and intellectual property clauses.</p></div></div>
+    <div id="licenseModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('licenseModal')">&times;</span><h2>License</h2><p>This digital product is licensed under standard MIT guidelines unless specified otherwise.</p></div></div>
+    <div id="cookiesModal" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('cookiesModal')">&times;</span><h2>Cookies Policy</h2><p>Our cookie frameworks track session continuity and preferences safely to optimize rendering performance.</p></div></div>
+
+    <!-- JavaScript Engine -->
+    <script>
+        // Typewriter Effect
+        const words = ["Welcome to Modern Digital Hub", "Explore Advanced Arabic Typography", "Optimized Responsive UI Framework"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typewriter').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typewriter').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btnIcon = document.querySelector('#themeToggleBtn i');
+            if (html.getAttribute('data-theme') === 'light') {
+                html.setAttribute('data-theme', 'dark');
+                btnIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                btnIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.replace('fa-minus', 'fa-plus');
+            } else {
+                answer.style.display = 'block';
+                icon.classList.replace('fa-plus', 'fa-minus');
+            }
+        }
+
+        // Modal Handlers
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Cookies Accept Banner
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+        if (localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
